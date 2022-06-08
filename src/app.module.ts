@@ -5,6 +5,8 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Usuario } from './usuarios/entities/usuario.entity';
 import { AuthModule } from './auth/auth.module';
+import { LocalStrategy } from './auth/local.strategy';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -20,9 +22,10 @@ import { AuthModule } from './auth/auth.module';
       serviceName:'ORCL'
     }),
     UsuariosModule,
-    AuthModule
+    AuthModule,
+    JwtService
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule {}

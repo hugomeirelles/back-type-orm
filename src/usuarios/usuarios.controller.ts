@@ -18,7 +18,7 @@ export class UsuariosController {
 
   @Get(':TXT_LOGIN')
   findOne(@Param('TXT_LOGIN') TXT_LOGIN: string) {
-    return this.usuariosService.findOne(TXT_LOGIN);
+    return this.usuariosService.findByLogin(TXT_LOGIN);
   }
 
   @Get('/login/:TXT_LOGIN/:TXT_SENHA')
@@ -30,7 +30,7 @@ export class UsuariosController {
       param2: TXT_SENHA
     }
     console.log(parametros);
-    return this.usuariosService.login(TXT_LOGIN, TXT_SENHA);
+    return this.usuariosService.login(TXT_LOGIN);
   }
 
   @Patch(':COD_USUARIO')

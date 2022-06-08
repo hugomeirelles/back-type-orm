@@ -5,6 +5,7 @@ import { Usuario } from './entities/usuario.entity';
 
 @Injectable()
 export class UsuariosService {
+
   Delete(COD_USUARIO: number) {
     return Usuario.deleteUsuario(COD_USUARIO)
   }
@@ -17,8 +18,8 @@ export class UsuariosService {
     return this.usuariosRepository.find();
   }    
 
-  async login(TXT_LOGIN: string, TXT_SENHA: string):Promise<Usuario[]>{
-    return await Usuario.findByName(TXT_LOGIN, TXT_SENHA)
+  async login(TXT_LOGIN: string):Promise<Usuario[]>{
+    return await Usuario.findByLogin(TXT_LOGIN)
   }
 
  async update(usuario: Usuario){
@@ -29,8 +30,8 @@ export class UsuariosService {
   return Usuario.deleteUsuario(COD_USUARIO);
  }
 
-  findOne(TXT_LOGIN: string):Promise<Usuario>{
-    return this.usuariosRepository.findOne(TXT_LOGIN);
+  async findByLogin(TXT_LOGIN: string):Promise<Usuario[]>{
+    return Usuario.findByLogin(TXT_LOGIN)
   }
 
   async create(usuario: Usuario):Promise<Usuario> {

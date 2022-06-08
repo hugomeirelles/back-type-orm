@@ -128,11 +128,20 @@ export class Usuario extends BaseEntity{
     @Column()
     COD_INTERESSADO:number;	 
 
-    public static findByName(TXT_LOGIN: string, TXT_SENHA:string){
+    public static validaLoginSenha(TXT_LOGIN: string, TXT_SENHA:string){
         return this.createQueryBuilder('TBL_SEG_USUARIO')
             .where("TBL_SEG_USUARIO.TXT_LOGIN = :TXT_LOGIN", {TXT_LOGIN})
             .andWhere("TBL_SEG_USUARIO.TXT_SENHA = :TXT_SENHA", {TXT_SENHA})
             .getMany()
+    }
+
+    public static findByLogin(TXT_LOGIN: string):Promise<Usuario[]>{
+
+        const res = this.createQueryBuilder('TBL_SEG_USUARIO')
+            .where("TBL_SEG_USUARIO.TXT_LOGIN = :TXT_LOGIN", {TXT_LOGIN})
+            .getMany()
+        
+        return res
     }
 
     public static async updateUsuario(usuario:Usuario){
