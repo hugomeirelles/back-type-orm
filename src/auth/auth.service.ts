@@ -20,7 +20,7 @@ export class AuthService {
         return null
     }
 
-    async validateuser(username:string, pass:string):Promise<Usuario[]>{
+    async validateUser(username:string, pass:string):Promise<Usuario[]>{
         const usuario = await this.usuarioService.findByLogin(username);
         const {...user } = usuario[0];
         if (user && user.TXT_SENHA === pass) {
