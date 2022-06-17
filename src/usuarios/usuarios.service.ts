@@ -1,18 +1,17 @@
-import { Injectable, Delete } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
+import { Injectable, Delete, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Usuario } from './entities/usuario.entity';
 
 @Injectable()
 export class UsuariosService {
-
+  constructor(
+    @Inject('USUARIO_REPOSITORY')
+    private usuariosRepository: Repository<Usuario>
+  ){}
+  
   Delete(COD_USUARIO: number) {
     return Usuario.deleteUsuario(COD_USUARIO)
   }
-  constructor(
-    @InjectRepository(Usuario)
-    private usuariosRepository: Repository<Usuario>
-  ){}
 
   findAll():Promise<Usuario[]>{
     return this.usuariosRepository.find();

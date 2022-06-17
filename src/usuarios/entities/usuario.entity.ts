@@ -5,7 +5,7 @@ import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm";
 @Entity({
     name:'TBL_SEG_USUARIO',
     database:'ORCL',
-    schema:'IUSR_UERR',
+    schema:'IUSR_PED_PORTAL',
     synchronize: false
 })
 export class Usuario extends BaseEntity{

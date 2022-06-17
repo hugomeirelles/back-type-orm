@@ -1,4 +1,4 @@
-import { Usuario } from './../usuarios/entities/usuario.entity';
+import { Usuario } from '../usuarios/entities/usuario.entity';
 import { Injectable } from '@nestjs/common';
 import { UsuariosService } from 'src/usuarios/usuarios.service';
 import { JwtService } from '@nestjs/jwt';

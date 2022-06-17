@@ -1,4 +1,5 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { UsuariosService } from './usuarios.service';
 import { Usuario } from './entities/usuario.entity';
 
@@ -11,6 +12,7 @@ export class UsuariosController {
     return this.usuariosService.create(usuario);
   }
 
+  @UseGuards(AuthGuard('local'))
   @Get()
   findAll() {
     return this.usuariosService.findAll();
