@@ -11,10 +11,10 @@ export class TblSegUsuarioAtributo {
   @JoinColumn([{ name: "COD_ATRIBUTO", referencedColumnName: "codAtributo" }])
   codAtributo: TblAtributo;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegUsuarioAtributos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 }

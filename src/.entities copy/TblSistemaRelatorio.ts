@@ -36,10 +36,10 @@ export class TblSistemaRelatorio {
   @Column("number", { name: "COD_ACESSO_TIPO", scale: 0, default: () => "(1)" })
   codAcessoTipo: number;
 
-  @ManyToMany(
+/*   @ManyToMany(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSistemaRelatorios
-  )
+  ) */
   @JoinTable({
     name: "TBL_SEG_USUARIO_RELATORIO",
     joinColumns: [

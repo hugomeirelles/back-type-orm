@@ -6,9 +6,8 @@ import {
   ManyToMany,
   ManyToOne,
   OneToMany,
-  PrimaryColumn
 } from "typeorm";
- //import { TblAcervoDocPalavraChave } from "./entities/TblAcervoDocPalavraChave";
+// import { TblAcervoDocPalavraChave } from "./TblAcervoDocPalavraChave";
 // import { TblAcervoDocumento } from "./TblAcervoDocumento";
 // import { TblAcervoDocumentoHistorico } from "./TblAcervoDocumentoHistorico";
 // import { TblArquivoComentario } from "./TblArquivoComentario";
@@ -92,7 +91,6 @@ import {
   synchronize: false
 })
 export class TblSegUsuario {
-  //@Column("number", { primary: true, name: "COD_USUARIO", scale: 0 })
   @Column("number", { primary: true, name: "COD_USUARIO", scale: 0 })
   codUsuario: number;
 
@@ -308,7 +306,7 @@ export class TblSegUsuario {
     () => TblJudicialNumero,
     (tblJudicialNumero) => tblJudicialNumero.codUsuario
   )
-  tblJudicialNumeros: Promise<TblJudicialNumero>[];
+  tblJudicialNumeros: TblJudicialNumero[];
 
   @OneToMany(() => TblMinuta, (tblMinuta) => tblMinuta.codUsuario)
   tblMinutas: TblMinuta[];

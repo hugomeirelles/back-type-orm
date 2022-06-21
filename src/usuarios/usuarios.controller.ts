@@ -13,7 +13,7 @@ export class UsuariosController {
   }
 
   @UseGuards(AuthGuard('local'))
-  @Get()
+  @Post('findall')
   findAll() {
     return this.usuariosService.findAll();
   }

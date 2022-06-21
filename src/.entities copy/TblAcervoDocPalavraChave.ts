@@ -29,12 +29,12 @@ export class TblAcervoDocPalavraChave {
   ])
   codAcervoDocumento2: TblAcervoDocumento;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblAcervoDocPalavraChaves
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 
   @ManyToOne(
     () => TblPalavraChave,

@@ -1,5 +1,8 @@
 import { DataSource } from 'typeorm';
 import { Usuario } from '../usuarios/entities/usuario.entity';
+import { TblSegUsuario } from '../entities/TblSegUsuario';
+
+
 
 export const databaseProviders = [
   {
@@ -12,7 +15,14 @@ export const databaseProviders = [
         username: 'iusr_ped_portal',
         password: 'abcd1234',
         database: 'ORCL',
-        entities: [Usuario],
+        entities: [
+          TblSegUsuario,
+          Usuario, 
+          //Entidades
+          //'src\database\entities\{.ts,.js}'
+          //__dirname + '../entities{.ts,.js}',
+          //__dirname + "/entities/*.{js,ts}"
+        ],
         synchronize: true,
         serviceName:'ORCL'
       });

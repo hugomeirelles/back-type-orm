@@ -34,7 +34,7 @@ export class TblSegAplicacao {
   )
   tblSegConfiguracaos: TblSegConfiguracao[];
 
-  @ManyToMany(
+/*   @ManyToMany(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegAplicacaos
   )
@@ -47,5 +47,5 @@ export class TblSegAplicacao {
       { name: "COD_USUARIO", referencedColumnName: "codUsuario" },
     ],
   })
-  tblSegUsuarios: TblSegUsuario[];
+  tblSegUsuarios: TblSegUsuario[]; */
 }

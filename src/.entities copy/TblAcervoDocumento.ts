@@ -138,12 +138,12 @@ export class TblAcervoDocumento {
   @JoinColumn([{ name: "COD_CARGO", referencedColumnName: "codCargo" }])
   codCargo: TblSegCargo;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblAcervoDocumentos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 
   @OneToMany(
     () => TblAcervoDocumentoAcesso,

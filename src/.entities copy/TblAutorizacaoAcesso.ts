@@ -81,14 +81,14 @@ export class TblAutorizacaoAcesso {
   ])
   codPessoaEmail: TblPessoaEmail;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblAutorizacaoAcessos
   )
   @JoinColumn([
     { name: "COD_USUARIO_CONCESSAO", referencedColumnName: "codUsuario" },
   ])
-  codUsuarioConcessao: TblSegUsuario;
+  codUsuarioConcessao: TblSegUsuario; */
 
   @ManyToOne(
     () => TblSegUsuario,

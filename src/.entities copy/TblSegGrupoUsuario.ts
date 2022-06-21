@@ -37,10 +37,10 @@ export class TblSegGrupoUsuario {
   @JoinColumn([{ name: "COD_GRUPO", referencedColumnName: "codGrupo" }])
   codGrupo2: TblSegGrupo;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegGrupoUsuarios
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario2: TblSegUsuario;
+  codUsuario2: TblSegUsuario; */
 }

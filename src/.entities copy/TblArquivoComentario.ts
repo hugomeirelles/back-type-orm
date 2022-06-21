@@ -35,10 +35,10 @@ export class TblArquivoComentario {
   ])
   codInventario2: TblArquivo;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblArquivoComentarios
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 }

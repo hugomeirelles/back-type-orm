@@ -37,10 +37,10 @@ export class TblAcervoDocumentoHistorico {
   ])
   codAcervoDocumento: TblAcervoDocumento;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblAcervoDocumentoHistoricos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 }

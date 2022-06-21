@@ -21,10 +21,10 @@ export class TblSegUsuarioMenu {
   @JoinColumn([{ name: "COD_FUNCAO", referencedColumnName: "codFuncao" }])
   codFuncao2: TblSegAplicacaoFuncao;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegUsuarioMenus
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario2: TblSegUsuario;
+  codUsuario2: TblSegUsuario; */
 }

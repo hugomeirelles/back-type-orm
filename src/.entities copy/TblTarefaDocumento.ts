@@ -19,12 +19,12 @@ export class TblTarefaDocumento {
   @Column("number", { primary: true, name: "COD_DOCUMENTO", scale: 0 })
   codDocumento: number;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblTarefaDocumentos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 
   @ManyToOne(() => TblTarefa, (tblTarefa) => tblTarefa.tblTarefaDocumentos)
   @JoinColumn([{ name: "COD_TAREFA", referencedColumnName: "codTarefa" }])

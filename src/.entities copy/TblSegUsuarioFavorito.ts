@@ -30,10 +30,10 @@ export class TblSegUsuarioFavorito {
   @Column("number", { name: "COD_ATIVO", scale: 0, default: () => "(1)" })
   codAtivo: number;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegUsuarioFavoritos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario2: TblSegUsuario;
+  codUsuario2: TblSegUsuario; */
 }

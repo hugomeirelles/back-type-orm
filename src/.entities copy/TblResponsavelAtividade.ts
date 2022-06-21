@@ -14,10 +14,10 @@ export class TblResponsavelAtividade {
   @JoinColumn([{ name: "COD_GRUPO", referencedColumnName: "codGrupo" }])
   codGrupo: TblFluxoTrabalhoGrupo;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblResponsavelAtividades
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 }

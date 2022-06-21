@@ -67,12 +67,12 @@ export class TblSolicitacao {
   ])
   codArquivoCentral: TblArquivoCentral;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSolicitacaos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario: TblSegUsuario;
+  codUsuario: TblSegUsuario; */
 
   @ManyToOne(
     () => TblSolicitacaoMotivo,

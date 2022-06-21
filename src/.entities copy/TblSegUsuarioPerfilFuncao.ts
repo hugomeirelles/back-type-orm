@@ -17,12 +17,12 @@ export class TblSegUsuarioPerfilFuncao {
   @Column("number", { primary: true, name: "COD_FUNCAO", scale: 0 })
   codFuncao: number;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblSegUsuarioPerfilFuncaos
   )
   @JoinColumn([{ name: "COD_USUARIO", referencedColumnName: "codUsuario" }])
-  codUsuario2: TblSegUsuario;
+  codUsuario2: TblSegUsuario; */
 
   @ManyToOne(() => TblOrgao, (tblOrgao) => tblOrgao.tblSegUsuarioPerfilFuncaos)
   @JoinColumn([{ name: "COD_ORGAO", referencedColumnName: "codOrgao" }])

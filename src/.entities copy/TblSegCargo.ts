@@ -43,9 +43,9 @@ export class TblSegCargo {
     (tblDocTipoPesRelacionamen) => tblDocTipoPesRelacionamen.tblSegCargos
   )
   tblDocTipoPesRelacionamen: TblDocTipoPesRelacionamen[];
-
+/* 
   @OneToMany(() => TblSegUsuario, (tblSegUsuario) => tblSegUsuario.codCargo)
-  tblSegUsuarios: TblSegUsuario[];
+  tblSegUsuarios: TblSegUsuario[]; */
 
   @OneToMany(
     () => TblSegUsuarioPerfil,

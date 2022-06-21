@@ -59,12 +59,12 @@ export class TblProtocoloAnexoHistorico {
   ])
   codUsuarioDesapensar: TblSegUsuario;
 
-  @ManyToOne(
+/*   @ManyToOne(
     () => TblSegUsuario,
     (tblSegUsuario) => tblSegUsuario.tblProtocoloAnexoHistoricos2
   )
   @JoinColumn([
     { name: "COD_USUARIO_APENSAR", referencedColumnName: "codUsuario" },
   ])
-  codUsuarioApensar: TblSegUsuario;
+  codUsuarioApensar: TblSegUsuario; */
 }
